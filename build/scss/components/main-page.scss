@@ -1,0 +1,150 @@
+.main__page {
+    display: flex;
+    margin: 3rem 0 5rem 0;
+}
+.main__page-left {
+    flex: 0 1 auto;
+    width: 48%;
+}
+.main__page-right {
+    flex: 0 1 auto;
+    width: 48%;
+    margin: 0 0 0 4%;
+}
+.main__page-title {
+    margin: 0;
+    font-size: 2.4rem;
+    color: $main-color;
+    a {
+        color: $main-color;
+        &:hover, &:active {
+    		color: lighten(#1c75bc, 20%);
+    	}
+    }
+}
+
+.article {
+    margin: 2rem 0 0 0;
+}
+.article__title {
+    margin: 0;
+    font-size: 1.6rem;
+}
+.article__text {
+    margin: 1rem 0 0 0;
+    font-size: 1.4rem;
+}
+.article__date {
+    display: block;
+    margin: 1rem 0 0 0;
+    font-size: 1.4rem;
+}
+.article__comments {
+    margin: 0 1rem 0 0;
+    color: $main-color;
+    font-size: 1.2rem;
+}
+.article__link {
+    font-size: 1.2rem;
+}
+.main__page-pagination {
+    margin: 3rem 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    a {
+        margin: 0 1rem 0 0;
+    }
+}
+.main__page-content,
+.article__content {
+    > :first-child {
+        margin-top: 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin: 2rem 0 0 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $main-color;
+    }
+    img {
+        margin: 2rem 1rem 0 0;
+        max-width: 100%;
+        height: auto !important;
+        &.float-left {
+            float: left;
+            margin: 2rem 2rem 2rem 0;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &.float-right {
+            float: right;
+            margin: 2rem 0 2rem 2rem;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    p {
+        margin: 2rem 0 0 0;
+    }
+    ul, ol {
+        margin: 2rem 0 0 0;
+        padding: 0 0 0 2rem;
+        li {
+            margin: 2rem 0 0 0;
+        }
+    }
+    mark {
+        background: none;
+        color: #ef4136;
+    }
+}
+.article__answer {
+    margin: 2rem 0 0 0;
+    color: $main-color;
+    b {
+        margin: 0 1rem 0 0;
+    }
+}
+
+@media only screen and (max-width : 1600px) {
+
+}
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+    .main__page {
+        display: block;
+    }
+    .main__page-left,
+    .main__page-right {
+        width: auto;
+        margin: 0;
+    }
+    .main__page-right {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

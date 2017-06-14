@@ -1,0 +1,139 @@
+.main__box {
+    display: flex;
+    margin: 3rem 0 5rem 0;
+}
+.main__content {
+    flex: 0 1 auto;
+    width: 82%;
+}
+.main__banner {
+    flex: 0 1 auto;
+    width: 17%;
+    margin: 0 0 0 2%;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+.main__section {
+    margin: 3rem 0 0 0;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+.main__section-title {
+    margin: 0;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.main__section-box {
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+.main__section-item {
+    position: relative;
+    flex: 0 1 auto;
+    width: 48%;
+    margin: 0 0 1.5rem 0;
+    padding: 0 0 0 2rem;
+    &:before {
+        content: '';
+        position: absolute;
+        top: .5rem;
+        left: 0;
+        width: 1rem;
+        height: 1rem;
+        background-color: $main-color;
+    }
+}
+.main__section-content {
+    margin: 2rem 0 0 0;
+    padding: 0 6rem;
+    column-count: 2;
+    column-gap: 6rem;
+}
+.main__section-item,
+.main__section-content {
+    > :first-child {
+        margin-top: 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin: 1rem 0 0 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $main-color;
+    }
+    p {
+        margin: 1rem 0 0 0;
+    }
+    ul, ol {
+        margin: 1rem 0 0 0;
+        padding: 0 0 0 2rem;
+        li {
+            margin: 1rem 0 0 0;
+        }
+    }
+    mark {
+        background: none;
+        color: #ef4136;
+    }
+}
+@media only screen and (max-width : 1600px) {
+
+}
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+    .main__section-box {
+        padding: 0;
+    }
+    .main__section-content {
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .main__section-box {
+        display: block;
+    }
+    .main__section-item {
+        width: auto;
+    }
+    .main__section-content {
+        column-count: auto;
+        column-gap: auto;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .main__box {
+        display: block;
+    }
+    .main__content {
+        width: auto;
+    }
+    .main__banner {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,0 +1,249 @@
+.map {
+    height: 810px;
+}
+
+/*Cтили ниже нужны только для расположения элементов в примере. Удалить.*/
+/*************************************************************/
+.map {
+    padding: 2rem;
+    background-image: url(../img/map.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    .map-serch {
+        flex: 0 1 auto;
+        margin: 0 1rem 0 0;
+    }
+    .map-add-object {
+        flex: 0 0 auto;
+        margin: 0 0 0 auto;
+    }
+    .map-controls {
+        flex: 0 0 auto;
+        margin: 0 0 0 1rem;
+    }
+    .map-share {
+        position: absolute;
+        bottom: 2rem;
+        right: 6rem;
+        margin-left: 1rem;
+    }
+}
+/*************************************************************/
+
+.map-serch {
+    display: flex;
+    max-width: 640px;
+    width: 100%;
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        outline: none;
+        box-shadow: none;
+        flex: 1 1 auto;
+        display: block;
+        height: 4rem;
+        padding: .5rem 1.5rem;
+        border: 2px solid $main-color;
+        border-radius: 5px;
+        font-size: 2rem;
+        color: #000;
+        background-color: #fff;
+        font-family: 'PT Sans', sans-serif;
+        transition:  all .3s ease;
+        &:hover, &:focus {
+            border-color: lighten($main-color, 10%);
+        }
+    }
+    button {
+        @include btn;
+        flex: 0 0 auto;
+        background-color: $main-color;
+        padding: .5rem 1.5rem;
+        margin: 0 0 0 .5rem;
+        border: 1px solid $main-color;
+        box-shadow: inset 0 0 0 1px #fff;
+        border-radius: 5px;
+        font-size: 2rem;
+        color: #fff;
+        font-family: 'PT Sans', sans-serif;
+        transition:  all .3s ease;
+        &:hover, &:active {
+            border-color: lighten($main-color, 10%);
+            background-color: lighten($main-color, 10%);
+        }
+    }
+}
+.map-add-object {
+    display: flex;
+    align-items: center;
+    padding: .7rem 1.5rem;
+    background-color: #fff;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #1c75bc;
+    transition:  all .3s ease;
+    [class^="icon-"] {
+        flex: 0 0 auto;
+        margin: 0 1rem 0 0;
+        font-size: 1.6rem;
+        transition:  all .3s ease;
+    }
+    &:hover, &:active {
+        border-color: lighten($main-color, 10%);
+        [class^="icon-"] {
+            filter: saturate(2);
+        }
+    }
+}
+.map-controls {
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    button {
+        @include btn;
+        display: block;
+        margin: 1rem 0 0 0;
+        transition:  all .3s ease;
+        &:first-child() {
+            margin-top: 0;
+        }
+        &:hover, &:active {
+            filter: saturate(2);
+        }
+    }
+}
+
+.map-share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 5rem 0 0;
+    background-color: #fff;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+}
+.map-share__links {
+    flex: 0 0 auto;
+    display: flex;
+    padding: 1rem 1.5rem;
+    a {
+        display: block;
+        flex: 0 1 auto;
+        margin: 0 1rem 0 0;
+        &:last-child {
+            margin-right: 0;
+        }
+        [class^="icon-"] {
+            border-radius: 5px;
+            transition:  all .3s ease;
+        }
+        &:hover, &:active {
+            [class^="icon-"] {
+                filter: saturate(2);
+            }
+        }
+    }
+}
+.map-share__code {
+    flex: 0 0 auto;
+    display: flex;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    font-size: 1.9rem;
+}
+.map-share__code-title {
+    flex: 0 0 auto;
+    margin: 0 1rem 0 0;
+    white-space: nowrap;
+}
+.map-share__code-box {
+    flex: 0 0 auto;
+    padding: .5rem 1rem;
+    border: 1px solid #5497cd;
+}
+.map-share__icon {
+    position: absolute;
+    right: -5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media only screen and (max-width : 1600px) {
+    .map {
+        height: 750px;
+    }
+
+}
+
+@media only screen and (max-width : 1400px) {
+    .map {
+        height: 700px;
+    }
+
+}
+
+@media only screen and (max-width : 1200px) {
+    .map {
+        height: 650px;
+    }
+
+}
+
+@media only screen and (max-width : 992px) {
+    .map {
+        height: 600px;
+    }
+
+}
+
+@media only screen and (max-width : 768px) {
+    .map {
+        height: 550px;
+    }
+
+}
+
+@media only screen and (max-width : 640px) {
+    .map {
+        height: 500px;
+    }
+
+    /*Cтили ниже нужны только для расположения элементов в примере. Удалить.*/
+    /*************************************************************/
+    .map {
+
+        padding: 1rem;
+        flex-direction: column;
+        .map-serch {
+            width: 100%;
+            margin: 0;
+        }
+        .map-add-object {
+            margin: 1rem 0 0 auto;
+        }
+        .map-controls {
+            margin: 1rem 0 0 auto;
+        }
+        .map-share {
+            right: 1rem;
+        }
+    }
+    /*************************************************************/
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,0 +1,323 @@
+.header {
+    padding: 4rem 0 0 0;
+}
+.header__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.header__logo {
+    margin: 0;
+    flex: 0 1 auto;
+    width: 22%;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.header__nav {
+    flex: 0 1 auto;
+    order: 1;
+    width: 100%;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__button {
+
+    @include btn;
+    display: none;
+    position: relative;
+    flex: 0 0 auto;
+    width: 30px;
+    height: 22px;
+    margin: 0 0 0 auto;
+    span, &:before, &:after {
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: $main-color;
+        transition: all .5s ease;
+    }
+    span {
+        top: 10px;
+    }
+    &:before, &:after {
+        content: '';
+    }
+    &:before {
+        top: 0;
+        animation: button-menu-before-static;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+    &:after {
+        bottom: 0;
+        animation: button-menu-after-static;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+    &:hover, &:active {
+        span, &:before, &:after {
+            background-color: lighten($main-color, 10%);
+        }
+    }
+    &.active {
+        span {
+            opacity: 0;
+        }
+        &:before {
+            animation: button-menu-before-active;
+            animation-duration: .5s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+        &:after {
+            animation: button-menu-after-active;
+            animation-duration: .5s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+@keyframes button-menu-before-active {
+    0% {
+        top: 0;;
+    }
+    50% {
+        top: 10px;
+        transform: rotate(0);
+    }
+    100% {
+        top: 10px;
+        transform: rotate(-45deg);
+    }
+}
+@keyframes button-menu-after-active {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 10px;
+        transform: rotate(0);
+    }
+    100% {
+        bottom: 10px;
+        transform: rotate(45deg);
+    }
+}
+@keyframes button-menu-before-static {
+    0% {
+        top: 10px;
+        transform: rotate(-45deg);
+    }
+    50% {
+        top: 10px;
+        transform: rotate(0);
+    }
+    100% {
+        top: 0;
+    }
+}
+@keyframes button-menu-after-static {
+    0% {
+        bottom: 10px;
+        transform: rotate(45deg);
+    }
+    50% {
+        bottom: 10px;
+        transform: rotate(0);
+    }
+    100% {
+        bottom: 0;
+    }
+}
+.header__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex: 0 1 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    li {
+        margin: .2rem 5rem .2rem 0;
+        a {
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 0 3px 0;
+            position: relative;
+            color: inherit;
+            text-decoration: none;
+            transition: all .3s ease;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: 0;
+                height: 2px;
+                background-color: $main-color;
+                transition: all .3s ease;
+            }
+            &:hover, &:active, &.active {
+                color: $main-color;
+                &:after {
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+.header__login {
+    flex: 0 1 auto;
+    text-decoration: none;
+    color: inherit;
+    font-size: 2rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    transition: all .3s ease;
+    &:hover, &:active, &:focus {
+        color: $main-color;
+        [class^="icon-"] {
+            filter: saturate(2);
+        }
+    }
+    i[class^="icon-"] {
+        flex: 0 0 auto;
+        margin: 0 2rem 0 0;
+        transition: all .3s ease;
+    }
+}
+.header__banner {
+    flex: 0 1 auto;
+    width: 75%;
+    margin: 0 0 0 3%;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width : 1600px) {
+    html {
+        font-size: 9.5px;
+    }
+    .container {
+        padding: 0 40px;
+    }
+    .header__menu {
+        font-size: 1.9rem;
+        li {
+            margin: .2rem 4rem .2rem 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 1400px) {
+    html {
+        font-size: 9px;
+    }
+    .container {
+        padding: 0 30px;
+    }
+    .header__menu {
+        font-size: 1.8rem;
+        li {
+            margin: .2rem 3rem .2rem 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    html {
+        font-size: 8.5px;
+    }
+    .container {
+        padding: 0 20px;
+    }
+    .header__menu {
+        font-size: 1.7rem;
+        li {
+            margin: .2rem 2rem .2rem 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    html {
+        font-size: 8px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    .header__menu {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .header {
+        padding: 2rem 0;
+    }
+    .header__nav {
+        display: block;
+        margin: 20px 0 0 0;
+    }
+    .header__button {
+        display: block;
+    }
+    .header__menu {
+        order: 1;
+        margin: 2rem 0 0 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        li {
+            margin: 0;
+            border-bottom: 1px solid lighten($main-color, 65%);
+            a {
+                padding: 2rem 0;
+                &:after {
+                    bottom: 1.5rem;
+                }
+            }
+        }
+    }
+    .header__logo {
+        width: 140px;
+    }
+    .header__login {
+        margin: 2rem 0 0 0;
+        justify-content: center;
+    }
+    .header__banner {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

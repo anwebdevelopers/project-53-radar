@@ -1,0 +1,76 @@
+.icon-login {
+    @include sprite(icon-login);
+}
+.icon-add-object {
+    @include sprite(icon-add-object)
+}
+.icon-add-photo {
+    @include sprite(icon-add-photo)
+}
+.icon-arrow-right {
+    @include sprite(icon-arrow-right)
+}
+.icon-arrows-gray {
+    @include sprite(icon-arrows-gray)
+}
+.icon-arrows-green {
+    @include sprite(icon-arrows-green)
+}
+.icon-close {
+    @include sprite(icon-close)
+}
+.icon-cog-gray {
+    @include sprite(icon-cog-gray)
+}
+.icon-cog-green {
+    @include sprite(icon-cog-green)
+}
+.icon-date {
+    @include sprite(icon-date)
+}
+.icon-fb {
+    @include sprite(icon-fb)
+}
+.icon-info {
+    @include sprite(icon-info)
+}
+.icon-loup {
+    @include sprite(icon-loup)
+}
+.icon-new {
+    @include sprite(icon-new)
+}
+.icon-loupe-blue {
+    @include sprite(icon-loupe-blue)
+}
+.icon-odn {
+    @include sprite(icon-odn)
+}
+.icon-share {
+    @include sprite(icon-share)
+}
+.icon-vk {
+    @include sprite(icon-vk)
+}
+.icon-zone-gray {
+    @include sprite(icon-zone-gray)
+}
+.icon-zone-green {
+    @include sprite(icon-zone-green)
+}
+.icon-zoom-gray {
+    @include sprite(icon-zoom-gray)
+}
+.icon-zoom-green {
+    @include sprite(icon-zoom-green)
+}
+.icon-star-gray {
+    @include sprite(icon-star-gray);
+}
+.icon-star-yellow {
+    @include sprite(icon-star-yellow);
+}
+i[class^="icon-"] {
+    display: block;
+    font-size: 1.6rem;
+}

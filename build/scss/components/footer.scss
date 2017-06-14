@@ -1,0 +1,92 @@
+.footer {
+    padding: 1.5rem 0;
+    background-color: #d5ead0;
+}
+.footer__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.footer__logo {
+    flex: 0 0 auto;
+    margin: 1rem 2rem 1rem 0;
+    width: 7.5rem;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.footer__copy {
+    flex: 0 1 auto;
+    margin: 1rem 2rem 1rem 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    p {
+        margin: 0;
+    }
+}
+.footer__serch {
+    flex: 0 1 auto;
+    max-width: 63rem;
+    width: 100%;
+    margin: 1rem 2rem 1rem 0;
+    display: flex;
+    align-items: center;
+    [class^="icon-"] {
+        flex: 0 0 auto;
+        margin: 0 1rem 0 0;
+    }
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        outline: none;
+        box-shadow: none;
+        flex: 1 1 auto;
+        display: block;
+        height: 3.2rem;
+        padding: 0 1.5rem;
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        font-size: 2rem;
+        color: #000;
+        background-color: #fff;
+        font-family: 'PT Sans', sans-serif;
+        transition:  all .3s ease;
+        &:hover, &:focus {
+            border-color: lighten($main-color, 10%);
+        }
+    }
+    button {
+        @include btn;
+        flex: 0 0 auto;
+        background-color: $main-color;
+        height: 3.2rem;
+        padding: 0 1.5rem;
+        margin: 0 0 0 .5rem;
+        border-radius: 5px;
+        font-size: 2rem;
+        line-height: 1;
+        color: #fff;
+        font-family: 'PT Sans', sans-serif;
+        transition:  all .3s ease;
+        &:hover, &:active {
+            border-color: lighten($main-color, 10%);
+            background-color: lighten($main-color, 10%);
+        }
+    }
+}
+.footer__counters {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.footer__counters-item {
+    flex: 0 0 auto;
+    margin: 0 0 0 1rem;
+    &:first-child {
+        margin-left: 0;
+    }
+}
